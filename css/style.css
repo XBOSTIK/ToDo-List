@@ -1,0 +1,404 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body, html {
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 0, 255, 0.99)), color-stop(0.01%, rgba(108, 105, 255, 0.99)), to(rgba(255, 203, 103, 0.99)));
+  background: linear-gradient(180deg, rgba(5, 0, 255, 0.99) 0%, rgba(108, 105, 255, 0.99) 0.01%, rgba(255, 203, 103, 0.99) 100%);
+}
+
+.container {
+  max-width: 1230px;
+  padding: 50px 15px;
+  margin: 0 auto;
+}
+
+.toDo-tasks, .toDo-head {
+  padding: 50px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
+          box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+}
+
+.toDo-head {
+  margin-bottom: 50px;
+}
+
+.toDo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #8E8E8E;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.logo span {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 65px;
+  color: #2D2424;
+  white-space: nowrap;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 20px;
+  width: 60%;
+}
+
+.form-input {
+  display: inline-block;
+  padding: 20px 15px;
+  width: 100%;
+  display: block;
+  border: 1px solid #2D2424;
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+  border-radius: 20px;
+  color: #959595;
+  font-size: 18px;
+}
+
+.form-btn {
+  background: #FF9736;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 40px;
+  white-space: nowrap;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, #2D2424 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 400ms ease-in-out;
+  transition: background 400ms ease-in-out;
+}
+
+.form-btn:hover {
+  background-position: 0;
+}
+
+.sorting-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.sorting-buttons .sorting-btn {
+  background: transparent;
+  border: 1px solid #2D2424;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #2D2424;
+  font-family: inherit;
+  width: 106px;
+  height: 42px;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, #2D2424 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.sorting-buttons .sorting-btn:hover {
+  background-position: 0;
+  color: #fff;
+}
+
+.toDo-tasks {
+  padding: 50px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
+          box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  min-height: 200px;
+}
+
+.toDo-tasks .title-tasks {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  color: #2D2424;
+  margin-bottom: 20px;
+}
+
+.tasks__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.tasks__list-item {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.24);
+  border-radius: 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.tasks__list-empty {
+  padding: 20px 0;
+  color: #FF9736;
+  font-size: 30px;
+}
+
+.tasks__list-empty span {
+  font-weight: 700;
+}
+
+.tasks__list-title {
+  max-width: 870px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #1E1E1E;
+}
+
+.tasks__list-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 15px;
+  width: 136px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tasks__list-btn {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  font-size: 26px;
+  cursor: pointer;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.tasks__list-btn:first-child {
+  padding: 0px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #515151;
+  padding: 9px 6px;
+}
+
+.tasks__list-btn:first-child:hover {
+  color: #FF9736;
+}
+
+.tasks__list-btn:last-child {
+  color: #DA3131;
+}
+
+.tasks__list-btn:last-child:hover {
+  color: #f8c6c6;
+}
+
+.tasks__list-btn:nth-child(2) {
+  color: #FF9736;
+}
+
+.tasks__list-btn:nth-child(2):hover {
+  color: #17B814;
+}
+
+.clearAll-btn {
+  margin-top: 30px;
+  display: inline-block;
+  background: transparent;
+  border: 1px solid #2D2424;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #2D2424;
+  font-family: inherit;
+  text-align: center;
+  padding: 20px 40px;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, #2D2424 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.clearAll-btn:hover {
+  background-position: 0;
+  color: #fff;
+}
+
+@media (max-width: 1040px) {
+  .toDo-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  form {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .toDo-head, .toDo-tasks {
+    padding: 30px 20px;
+  }
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .form-input {
+    width: auto;
+  }
+  .form-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo span {
+    font-size: 48px;
+  }
+  .tasks__list-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 15px;
+  }
+  .tasks__list-empty {
+    padding: 10px 0;
+    font-size: 24px;
+  }
+  .tasks__list-buttons {
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 30px 5px;
+  }
+  .logo span {
+    font-size: 40px;
+  }
+  .toDo-head, .toDo-tasks {
+    padding: 30px 10px;
+  }
+  .toDo-box {
+    gap: 10px;
+  }
+  .form-input {
+    padding: 12px 10px;
+  }
+  .form-btn {
+    font-size: 16px;
+  }
+}

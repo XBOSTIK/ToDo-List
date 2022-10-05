@@ -1,0 +1,401 @@
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;&family=Nunito:wght@400;500;600;700;800&display=swap');
+// font-family: 'Inter', sans-serif;
+// font-family: 'Nunito', sans-serif;
+
+// vars =========================
+$text-color: #1E1E1E;
+$accent-color:#FF9736;
+$dark-color: #2D2424;
+$done-color: #17B814;
+$delete-color: #DA3131;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+body, html {
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background: linear-gradient(180deg, rgba(5, 0, 255, 0.99) 0%, rgba(108, 105, 255, 0.99) 0.01%, rgba(255, 203, 103, 0.99) 100%);
+}
+
+// TODO HEAD ==========================================
+.container {
+    max-width: 1230px;
+    padding: 50px 15px;
+    margin: 0 auto;
+}
+.toDo-tasks, .toDo-head  {
+    padding: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
+    border-radius: 20px;
+}
+
+
+.toDo-head {
+    margin-bottom: 50px;
+}
+
+.toDo-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #8E8E8E;
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    span {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 65px;
+        color: $dark-color;
+        white-space: nowrap;
+    }
+}
+
+
+form {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 60%;
+}
+.form {
+    &-input {
+        display: inline-block;
+        padding: 20px 15px;
+        width: 100%;
+        display: block;
+        border: 1px solid $dark-color; 
+        font-family: 'Inter', sans-serif;
+        font-weight: normal;
+        border-radius: 20px;
+        color: #959595;
+        font-size: 18px;
+
+    }
+    &-btn {
+        background: $accent-color;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        color: #FFFFFF;
+        border: none;
+        padding: 12px 40px;
+        white-space: nowrap;
+        cursor: pointer;
+        background: {
+            image: linear-gradient(45deg, $dark-color 50%, transparent 50%);
+            position: 100%;
+            size: 400%;
+        }
+        transition: background 400ms ease-in-out;
+          
+        &:hover {
+            background-position: 0;
+        }
+    }
+}
+
+.sorting-buttons{
+    display: flex;
+    gap: 15px;
+    .sorting-btn {
+        background: transparent;
+        border: 1px solid $dark-color;
+        border-radius: 20px;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: $dark-color;
+        font-family: inherit;
+        width: 106px;
+        height: 42px;
+        text-align: center;
+        cursor: pointer;
+        background: {
+            image: linear-gradient(45deg, $dark-color 50%, transparent 50%);
+            position: 100%;
+            size: 400%;
+        }
+        transition: background 500ms ease-in-out, color 500ms ease-in-out ;
+          
+        &:hover {
+            background-position: 0;
+            color: #fff;
+        }
+    }
+}
+
+
+// TODO TASKS
+.toDo-tasks {
+    padding: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
+    border-radius: 20px;
+    min-height: 200px;
+    .title-tasks {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 49px;
+        color: $dark-color;
+        margin-bottom: 20px;
+    }
+}
+
+
+.tasks__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &-item {
+        background: #FFFFFF;
+        box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.24);
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &-empty {
+        padding: 20px 0;
+        color: $accent-color;
+        font-size: 30px;
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &-title {
+        max-width: 870px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        color: $text-color;
+    }
+
+    &-buttons {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 15px;
+        width: 136px;
+        align-items: center;
+    }
+
+    &-btn {
+        background: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        padding: 2px;
+        font-size: 26px;
+        cursor: pointer;
+        transition: color .3s ease-in-out;
+        &:first-child {
+            padding: 0px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: #515151;
+            padding: 9px 6px;
+            &:hover {
+                color: $accent-color;
+            }
+        }
+
+        &:last-child {
+            color: $delete-color;
+            &:hover {
+                color: #f8c6c6;
+            }
+        }
+
+        &:nth-child(2) {
+            color: $accent-color;
+            &:hover {
+                color: $done-color;
+            }
+        }
+        
+    }
+}
+
+.clearAll-btn {
+    margin-top:30px;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid $dark-color;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $dark-color;
+    font-family: inherit;
+    text-align: center;
+    padding: 20px 40px;
+    cursor: pointer;
+    background: {
+        image: linear-gradient(45deg, $dark-color 50%, transparent 50%);
+        position: 100%;
+        size: 400%;
+    }
+    transition: background 500ms ease-in-out, color 500ms ease-in-out ;
+        
+    &:hover {
+        background-position: 0;
+        color: #fff;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1040px){
+    // header
+    .toDo-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form {
+        width: 85%;
+    }
+}
+
+
+
+@media(max-width: 768px){
+    .toDo-head, .toDo-tasks {
+        padding: 30px 20px;
+    }
+    form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form {
+        &-input {
+            width: auto;
+        }
+        &-btn {
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media(max-width: 576px){
+    .logo {
+        span {
+            font-size: 48px;
+        }
+    }
+
+    .tasks__list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .tasks__list-empty {
+        padding: 10px 0;
+        font-size: 24px;
+    }
+    .tasks__list-buttons{
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media(max-width: 320px){
+    .container {
+        padding: 30px 5px;
+    }
+    .logo {
+        span {
+            font-size: 40px;
+        }
+    }
+    .toDo-head, .toDo-tasks {
+        padding: 30px 10px;
+    }
+
+    .toDo-box {
+        gap: 10px;
+    }
+    .form {
+        &-input {
+            padding: 12px 10px;
+        }
+        &-btn {
+            font-size: 16px;
+        }
+    }
+}
