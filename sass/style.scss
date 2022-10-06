@@ -239,7 +239,7 @@ form {
         align-items: center;
         gap: 40px;
         &.active {
-            span {
+            input[type="text"] {
                 color: #9b9a9a;
                 text-decoration: line-through;
             }
@@ -255,11 +255,13 @@ form {
         }
     }
 
-    &-title {
-        max-width: 870px;
-        font-weight: 400;
+    &-text {
+        padding:10px;
+        width: 100%;
+        padding: 0 5px;
+        border: none;
+        outline: none;
         font-size: 20px;
-        line-height: 27px;
         color: $text-color;
     }
 
@@ -343,6 +345,9 @@ form {
     form {
         width: 85%;
     }
+    .tasks__list-text {
+        font-size: 18px;
+    }
 }
 
 
@@ -365,8 +370,8 @@ form {
         }
     }
 
-    .tasks__list-title {
-        font-size: 18px;
+    .tasks__list-text {
+        font-size: 16px;
     }
 
 }
@@ -384,10 +389,9 @@ form {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
+        padding: 20px 10px;
     }
-    .tasks__list-title {
-        font-size: 16px;
-    }
+
     .tasks__list-empty {
         padding: 10px 0;
         font-size: 24px;
@@ -396,12 +400,27 @@ form {
         max-width: none;
         width: 100%;
         justify-content: flex-end;
+
+    }
+    .tasks__list-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+        padding: 0;
+    }
+
+    input[type="checkbox"]  {
+        width: 35px;
+        height: 35px;
+    }
+    .tasks__list-text {
+        font-size: 14px;
     }
 }
 
 @media(max-width: 320px){
     .container {
-        padding: 30px 5px;
+        padding: 30px 0;
     }
     .logo {
         span {

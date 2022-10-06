@@ -271,7 +271,7 @@ form {
   gap: 40px;
 }
 
-.tasks__list-item.active span {
+.tasks__list-item.active input[type="text"] {
   color: #9b9a9a;
   text-decoration: line-through;
 }
@@ -286,11 +286,13 @@ form {
   font-weight: 700;
 }
 
-.tasks__list-title {
-  max-width: 870px;
-  font-weight: 400;
+.tasks__list-text {
+  padding: 10px;
+  width: 100%;
+  padding: 0 5px;
+  border: none;
+  outline: none;
   font-size: 20px;
-  line-height: 27px;
   color: #1E1E1E;
 }
 
@@ -388,6 +390,9 @@ form {
   form {
     width: 85%;
   }
+  .tasks__list-text {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -407,8 +412,8 @@ form {
   .form-btn {
     width: 100%;
   }
-  .tasks__list-title {
-    font-size: 18px;
+  .tasks__list-text {
+    font-size: 16px;
   }
 }
 
@@ -425,9 +430,7 @@ form {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 15px;
-  }
-  .tasks__list-title {
-    font-size: 16px;
+    padding: 20px 10px;
   }
   .tasks__list-empty {
     padding: 10px 0;
@@ -440,11 +443,24 @@ form {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  .tasks__list-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+    padding: 0;
+  }
+  input[type="checkbox"] {
+    width: 35px;
+    height: 35px;
+  }
+  .tasks__list-text {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 320px) {
   .container {
-    padding: 30px 5px;
+    padding: 30px 0;
   }
   .logo span {
     font-size: 40px;
