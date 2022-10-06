@@ -100,12 +100,18 @@ input[type="checkbox"]:checked::after {
 }
 
 
-// TODO HEAD ========================================================
+// global ===============================================================
 .container {
     max-width: 1230px;
     padding: 50px 15px;
     margin: 0 auto;
 }
+
+.hidden {
+    display: none;
+}
+// TODO HEAD ========================================================
+
 .toDo-tasks, .toDo-head  {
     padding: 50px;
     background: #FFFFFF;
@@ -282,6 +288,11 @@ form {
         font-size: 26px;
         cursor: pointer;
         transition: color .3s ease-in-out;
+
+        i {
+            pointer-events: none;
+        }
+
         &:first-child {
             padding: 0px;
             font-weight: 500;
@@ -293,7 +304,7 @@ form {
                 color: $accent-color;
             }
         }
-
+        
         &:last-child {
             color: $delete-color;
             &:hover {

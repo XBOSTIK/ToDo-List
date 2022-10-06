@@ -99,6 +99,10 @@ input[type="checkbox"]:checked::after {
   margin: 0 auto;
 }
 
+.hidden {
+  display: none;
+}
+
 .toDo-tasks, .toDo-head {
   padding: 50px;
   background: #FFFFFF;
@@ -319,6 +323,10 @@ form {
   cursor: pointer;
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
+}
+
+.tasks__list-btn i {
+  pointer-events: none;
 }
 
 .tasks__list-btn:first-child {
