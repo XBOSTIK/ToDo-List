@@ -44,8 +44,53 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 0, 255, 0.99)), color-stop(0.01%, rgba(108, 105, 255, 0.99)), to(rgba(255, 203, 103, 0.99)));
-  background: linear-gradient(180deg, rgba(5, 0, 255, 0.99) 0%, rgba(108, 105, 255, 0.99) 0.01%, rgba(255, 203, 103, 0.99) 100%);
+  background: #191b2e;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  margin: 0;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #8e8e8e;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+input[type="checkbox"]::after {
+  font-family: 'Font Awesome 6 Free';
+  content: "\f00c";
+  font-weight: 600;
+  font-size: 22px;
+  color: #17B814;
+  display: none;
+}
+
+input[type="checkbox"]:hover {
+  border-color: #17B814;
+}
+
+input[type="checkbox"]:checked {
+  border-color: #17B814;
+}
+
+input[type="checkbox"]:checked:hover {
+  border-color: #2D2424;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
 }
 
 .container {
@@ -59,7 +104,7 @@ body {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
           box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .toDo-head {
@@ -76,10 +121,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 35px;
-  border-bottom: 1px solid #8E8E8E;
+  gap: 40px;
   margin-bottom: 20px;
-  gap: 30px;
 }
 
 .logo {
@@ -90,14 +133,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
+  color: #2D2424;
 }
 
 .logo span {
   font-weight: 800;
   font-size: 48px;
   line-height: 65px;
-  color: #2D2424;
   white-space: nowrap;
+}
+
+.logo i {
+  font-size: 32px;
 }
 
 form {
@@ -108,25 +155,25 @@ form {
       -ms-flex-pack: end;
           justify-content: flex-end;
   gap: 20px;
-  width: 60%;
+  width: 100%;
 }
 
 .form-input {
   display: inline-block;
-  padding: 20px 15px;
+  padding: 12px 15px;
   width: 100%;
   display: block;
   border: 1px solid #2D2424;
   font-family: 'Inter', sans-serif;
   font-weight: normal;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #959595;
   font-size: 18px;
 }
 
 .form-btn {
-  background: #FF9736;
-  border-radius: 20px;
+  background: #fcad63;
+  border-radius: 10px;
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
@@ -138,8 +185,8 @@ form {
   background-image: linear-gradient(45deg, #2D2424 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  -webkit-transition: background 400ms ease-in-out;
-  transition: background 400ms ease-in-out;
+  -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background 500ms ease-in-out, color 500ms ease-in-out;
 }
 
 .form-btn:hover {
@@ -156,8 +203,8 @@ form {
 .sorting-buttons .sorting-btn {
   background: transparent;
   border: 1px solid #2D2424;
-  border-radius: 20px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 17px;
   line-height: 22px;
   text-align: center;
   color: #2D2424;
@@ -183,7 +230,7 @@ form {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
           box-shadow: 0px 4px 6px rgba(198, 198, 198, 0.36);
-  border-radius: 20px;
+  border-radius: 10px;
   min-height: 200px;
 }
 
@@ -210,7 +257,7 @@ form {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.24);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,9 +271,14 @@ form {
   gap: 40px;
 }
 
+.tasks__list-item.active span {
+  color: #9b9a9a;
+  text-decoration: line-through;
+}
+
 .tasks__list-empty {
   padding: 20px 0;
-  color: #FF9736;
+  color: #fcad63;
   font-size: 30px;
 }
 
@@ -249,7 +301,7 @@ form {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   gap: 15px;
-  width: 136px;
+  max-width: 150px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -277,7 +329,7 @@ form {
 }
 
 .tasks__list-btn:first-child:hover {
-  color: #FF9736;
+  color: #fcad63;
 }
 
 .tasks__list-btn:last-child {
@@ -289,11 +341,11 @@ form {
 }
 
 .tasks__list-btn:nth-child(2) {
-  color: #FF9736;
+  color: #fcad63;
 }
 
 .tasks__list-btn:nth-child(2):hover {
-  color: #17B814;
+  color: #f3d5b8;
 }
 
 .clearAll-btn {
@@ -301,8 +353,9 @@ form {
   display: inline-block;
   background: transparent;
   border: 1px solid #2D2424;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 18px;
+  font-weight: 500;
   line-height: 22px;
   text-align: center;
   color: #2D2424;
@@ -354,6 +407,9 @@ form {
   .form-btn {
     width: 100%;
   }
+  .tasks__list-title {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -370,11 +426,15 @@ form {
             align-items: flex-start;
     gap: 15px;
   }
+  .tasks__list-title {
+    font-size: 16px;
+  }
   .tasks__list-empty {
     padding: 10px 0;
     font-size: 24px;
   }
   .tasks__list-buttons {
+    max-width: none;
     width: 100%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;

@@ -22,7 +22,7 @@
             <div class="toDo-box">
                 <div class="logo">
                     <span>ToDo List</span>
-                    <img src="img/icons/logo-task-icon.svg" alt="">
+                    <i class="fa-solid fa-list-check"></i>
                 </div>
                 <form id="form">
                     <input type="text" class="form-input" id="taskInput" placeholder="Add text for task" required>
@@ -30,7 +30,7 @@
 				</form>
             </div>
             <div class="sorting-buttons">
-                <button data-action="all-task" class="sorting-btn sorting-all">All</button>
+                <button data-action="all-task" class="sorting-btn sorting-all">All tasks</button>
                 <button data-action="active-task" class="sorting-btn sorting-active">Active</button>
                 <button data-action="done-tasks" class="sorting-btn sorting-done">Done</button>
             </div>
@@ -45,12 +45,12 @@
                     <span>Empty Tasks</span>
                     <i class="fa-solid fa-chevron-right"></i>
                 </li> -->
-                <li class="tasks__list-item">
+                <li class="tasks__list-item active">
                     <span class="tasks__list-title">Lorem ipsum dolor sit amet</span>
                     <div class="tasks__list-buttons">
-                        <button class="tasks__list-btn edit-btn" data-action="edit"><span>edit</span></button>
-                        <button class="tasks__list-btn done-btn" data-action="done">
-                            <i class="fa-solid fa-check"></i>
+                        <input type="checkbox" class="tasks__list-input done-btn" data-action="done"></input>
+                        <button class="tasks__list-btn edit-btn" data-action="edit">
+                            <i class="fa-solid fa-pen"></i>
                         </button>
                         <button class="tasks__list-btn delete-btn" data-action="delete">
                             <i class="fa-solid fa-trash"></i>
@@ -60,9 +60,9 @@
                 <li class="tasks__list-item">
                     <span class="tasks__list-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
                     <div class="tasks__list-buttons">
-                        <button class="tasks__list-btn edit-btn" data-action="edit">edit</button>
-                        <button class="tasks__list-btn done-btn" data-action="done">
-                            <i class="fa-solid fa-check"></i>
+                        <input type="checkbox" class="tasks__list-input done-btn" data-action="done"></input>
+                        <button class="tasks__list-btn edit-btn" data-action="edit">
+                            <i class="fa-solid fa-pen"></i>
                         </button>
                         <button class="tasks__list-btn delete-btn" data-action="delete">
                             <i class="fa-solid fa-trash"></i>
@@ -72,9 +72,9 @@
                 <li class="tasks__list-item">
                     <span class="tasks__list-title">Lorem ipsum dolor sit amet</span>
                     <div class="tasks__list-buttons">
-                        <button class="tasks__list-btn edit-btn" data-action="edit"><span>edit</span></button>
-                        <button class="tasks__list-btn done-btn" data-action="done">
-                            <i class="fa-solid fa-check"></i>
+                        <input type="checkbox" class="tasks__list-input done-btn" data-action="done"></input>
+                        <button class="tasks__list-btn edit-btn" data-action="edit">
+                            <i class="fa-solid fa-pen"></i>
                         </button>
                         <button class="tasks__list-btn delete-btn" data-action="delete">
                             <i class="fa-solid fa-trash"></i>
