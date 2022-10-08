@@ -211,6 +211,11 @@ form {
             background-position: 0;
             color: #fff;
         }
+
+        &.active {
+            background-color: $dark-color;
+            color: #ffffff;
+        }
     }
 }
 

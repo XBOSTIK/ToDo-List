@@ -229,6 +229,11 @@ form {
   color: #fff;
 }
 
+.sorting-buttons .sorting-btn.active {
+  background-color: #2D2424;
+  color: #ffffff;
+}
+
 .toDo-tasks {
   padding: 50px;
   background: #FFFFFF;
